@@ -1,0 +1,260 @@
+@use "../global" as g;
+
+/*!
+layout > header
+------------------------------
+*/
+.l-header {
+    background-image: var(--color-bg-header);
+    display: flex;
+    align-items: center;
+    padding-left: 20rem;
+    position: fixed;
+    z-index: var(--z-index-header);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 64rem;
+
+    @include g.mq() {
+        padding-left: 70rem;
+        height: 106rem;
+    }
+}
+
+.l-header-logo {
+    width: 156rem;
+    aspect-ratio: 156/36;
+
+    @include g.mq() {
+        width: 300rem;
+        aspect-ratio: 300/48;
+    }
+}
+
+.l-header-open-button,
+.l-header-close-button {
+    margin-left: auto;
+    background-color: var(--color-white);
+    width: 64rem;
+    height: 64rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10rem;
+    padding-bottom: 11rem;
+
+    img {
+        width: 20rem;
+    }
+
+    span {
+        font-family: var(--font-family-en);
+        font-size: 12rem;
+        font-weight: 400;
+        line-height: 1;
+    }
+}
+
+.l-header-open-button {
+    @include g.mq() {
+        display: none;
+    }
+}
+
+.l-header-close-button {
+    @include g.mq() {
+        display: none;
+    }
+}
+
+.l-header-entry-button {
+    background-image: var(--color-bg-gradient-blue);
+    color: var(--color-white);
+    width: 64rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 15rem;
+
+    @include g.mq() {
+        padding: 38rem 24rem 32rem;
+        width: 181rem;
+        display: grid;
+        grid-template-columns: 1fr 24rem;
+        gap: 4rem 38rem;
+        justify-content: center;
+        margin-left: 64rem;
+    }
+}
+
+.l-header-entry-text-en {
+    font-family: var(--font-family-en);
+    font-weight: 400;
+    font-size: 14rem;
+    line-height: 1;
+
+    @include g.mq() {
+        grid-row: 1/2;
+        grid-column: 1/2;
+        align-self: flex-end;
+        font-size: 20rem;
+    }
+}
+
+.l-header-entry-text-ja {
+    font-weight: bold;
+    font-size: 10rem;
+    line-height: 1;
+
+    @include g.mq() {
+        grid-row: 2/3;
+        grid-column: 1/2;
+        align-self: flex-start;
+        font-size: 12rem;
+    }
+}
+
+.l-header-entry-icon {
+    display: none;
+
+    @include g.mq() {
+        display: grid;
+        place-items: center;
+        width: 24rem;
+        aspect-ratio: 1;
+        border: 1rem solid var(--color-white);
+        border-radius: 100vh;
+        grid-row: 1/3;
+        grid-column: 2/3;
+
+        img {
+            width: 7rem;
+            height: 12rem;
+        }
+    }
+}
+
+.l-header-menu {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: var(--color-bg-gradient-blue);
+
+    @include g.mq() {
+        display: contents;
+    }
+}
+
+.l-header-menu-head {
+    display: flex;
+    align-items: center;
+    height: 64rem;
+    padding-left: 20rem;
+
+    @include g.mq() {
+        padding-left: 0;
+    }
+}
+
+.l-header-menu-logo {
+    width: 156rem;
+
+    @include g.mq() {
+        display: none;
+    }
+}
+
+.l-header-nav {
+    margin-inline: 20rem;
+    margin-top: 32rem;
+
+    @include g.mq() {
+        margin: 0;
+        margin-left: auto;
+    }
+}
+
+.l-header-nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24rem;
+
+    @include g.mq() {
+        flex-direction: row;
+        gap: 32rem;
+    }
+}
+
+.l-header-nav-link {
+    display: flex;
+    align-items: center;
+    gap: 8rem;
+    color: var(--color-white);
+}
+
+.l-header-nav-text-en {
+    font-family: var(--font-family-en);
+    font-weight: 400;
+    font-size: 24rem;
+
+    @include g.mq() {
+        display: none;
+    }
+}
+
+.l-header-nav-text-ja {
+    font-size: 14rem;
+
+    @include g.mq() {
+        font-weight: 700;
+        font-size: 16rem;
+    }
+}
+
+.l-header-nav-entry-button {
+    margin-top: 40rem;
+    margin-inline: 20rem;
+    height: 73rem;
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    align-items: center;
+    gap: 8rem;
+    padding-inline: 31rem;
+    border-radius: 100vh;
+    color: var(--color-white);
+    border: 1rem solid var(--color-bg-base);
+    background-color: rgb(from var(--color-white) r g b / 20%);
+
+    @include g.mq() {
+        display: none;
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        width: 12rem;
+        height: 20rem;
+        mask-image: url("../../img/icon-chevron.svg");
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        mask-position: center;
+        justify-self: flex-end;
+        background-color: var(--color-white);
+    }
+}
+
+.l-header-nav-entry-text-en {
+    font-size: 24rem;
+    font-family: var(--font-family-en);
+    font-weight: 400;
+}
+
+.l-header-nav-entry-text-ja {
+    font-size: 14rem;
+}
