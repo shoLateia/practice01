@@ -92,7 +92,7 @@ page > top > top-feature
 
 .top-feature-item {
     height: 280rem;
-    background-image: url("../../../img//bg-top-feature.png");
+    background-image: url("../img/bg-top-feature.png");
     background-size: cover;
     background-position: center;
     color: var(--color-white);
@@ -103,11 +103,11 @@ page > top > top-feature
     }
 
     &:nth-child(2) {
-        background-image: url("../../../img/bg-top-feature02.png");
+        background-image: url("../img/bg-top-feature02.png");
     }
 
     &:nth-child(3) {
-        background-image: url("../../../img/bg-top-feature03.jpg");
+        background-image: url("../img/bg-top-feature03.jpg");
     }
 }
 
