@@ -1168,7 +1168,7 @@ page > top > top-feature
 
 .top-feature-item {
   height: 280rem;
-  background-image: url(../../../img/bg-top-feature.png);
+  background-image: url("../../../img/bg-top-feature.png");
   background-size: cover;
   background-position: center;
   color: var(--color-white);
@@ -1180,10 +1180,10 @@ page > top > top-feature
   }
 }
 .top-feature-item:nth-child(2) {
-  background-image: url(../../../img/bg-top-feature02.png);
+  background-image: url("../../../img/bg-top-feature02.png");
 }
 .top-feature-item:nth-child(3) {
-  background-image: url(../../../img/bg-top-feature03.jpg);
+  background-image: url("../../../img/bg-top-feature03.jpg");
 }
 
 .top-feature-article {
@@ -1359,11 +1359,11 @@ page > top > top-interview
 }
 
 .top-interview-img--nurse {
-  background-image: url(../../../img/img-top-interview.png);
+  background-image: url("../../../img/img-top-interview.png");
 }
 
 .top-interview-img--staff {
-  background-image: url(../../../img/img-top-interview02.png);
+  background-image: url("../../../img/img-top-interview02.png");
 }
 
 .top-interview-copy {
