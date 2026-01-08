@@ -6,7 +6,7 @@ page > top > top-kv
 */
 .top-kv {
     height: 600rem;
-    background-image: url(../../../img/bg-top-kv-sp.png);
+    background-image: url("../../../img/bg-top-kv-sp.png");
     background-size: cover;
     background-position: center;
     padding-inline: 12rem;
@@ -14,7 +14,7 @@ page > top > top-kv
 
     @include g.mq() {
         height: 800rem;
-        background-image: url(../../../img/bg-top-kv.png);
+        background-image: url("../../../img/bg-top-kv.png");
         padding-inline: 388rem;
     }
 }

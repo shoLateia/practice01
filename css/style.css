@@ -718,7 +718,7 @@ page > top > top-kv
 */
 .top-kv {
   height: 600rem;
-  background-image: url(../../../img/bg-top-kv-sp.png);
+  background-image: url("../../../img/bg-top-kv-sp.png");
   background-size: cover;
   background-position: center;
   padding-inline: 12rem;
@@ -727,7 +727,7 @@ page > top > top-kv
 @media screen and (min-width: 768px) {
   .top-kv {
     height: 800rem;
-    background-image: url(../../../img/bg-top-kv.png);
+    background-image: url("../../../img/bg-top-kv.png");
     padding-inline: 388rem;
   }
 }
@@ -1168,7 +1168,7 @@ page > top > top-feature
 
 .top-feature-item {
   height: 280rem;
-  background-image: url("../../../img/bg-top-feature.png");
+  background-image: url("../../../img//bg-top-feature.png");
   background-size: cover;
   background-position: center;
   color: var(--color-white);
