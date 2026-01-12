@@ -100,16 +100,6 @@ layout > footer
         flex-direction: column;
         align-items: flex-end;
     }
-
-    &::after {
-        content: "";
-        display: block;
-    }
-
-    &::before {
-        content: "";
-        display: block;
-    }
 }
 
 .l-footer-links {
