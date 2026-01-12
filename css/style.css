@@ -557,8 +557,8 @@ layout > header
   display: block;
   width: 12rem;
   height: 20rem;
-  -webkit-mask-image: url("../../img/icon-chevron.svg");
-          mask-image: url("../../img/icon-chevron.svg");
+  -webkit-mask-image: url("../img/icon-chevron.svg");
+          mask-image: url("../img/icon-chevron.svg");
   -webkit-mask-size: contain;
           mask-size: contain;
   -webkit-mask-repeat: no-repeat;
@@ -668,8 +668,8 @@ layout > footer
   display: block;
   width: 7rem;
   height: 12rem;
-  -webkit-mask-image: url("../../../img/icon-chevron.svg");
-          mask-image: url("../../../img/icon-chevron.svg");
+  -webkit-mask-image: url("../img/icon-chevron.svg");
+          mask-image: url("../img/icon-chevron.svg");
   -webkit-mask-size: contain;
           mask-size: contain;
   -webkit-mask-repeat: no-repeat;
@@ -709,16 +709,12 @@ layout > footer
 }
 
 /*!
-page > top > top-common
-------------------------------
-*/
-/*!
 page > top > top-kv
 ------------------------------
 */
 .top-kv {
   height: 600rem;
-  background-image: url(../../../img/bg-top-kv-sp.png);
+  background-image: url("../img/bg-top-kv-sp.png");
   background-size: cover;
   background-position: center;
   padding-inline: 12rem;
@@ -727,7 +723,7 @@ page > top > top-kv
 @media screen and (min-width: 768px) {
   .top-kv {
     height: 800rem;
-    background-image: url(../../../img/bg-top-kv.png);
+    background-image: url("../img/bg-top-kv.png");
     padding-inline: 388rem;
   }
 }
@@ -873,8 +869,8 @@ page > top > top-news
   display: block;
   width: 7rem;
   height: 12rem;
-  -webkit-mask-image: url("../../../img/icon-chevron.svg");
-          mask-image: url("../../../img/icon-chevron.svg");
+  -webkit-mask-image: url("../img/icon-chevron.svg");
+          mask-image: url("../img/icon-chevron.svg");
   -webkit-mask-size: contain;
           mask-size: contain;
   -webkit-mask-repeat: no-repeat;
@@ -1025,8 +1021,8 @@ page > top > top-greeting
   display: block;
   width: 7rem;
   height: 12rem;
-  -webkit-mask-image: url("../../../img/icon-chevron.svg");
-          mask-image: url("../../../img/icon-chevron.svg");
+  -webkit-mask-image: url("../img/icon-chevron.svg");
+          mask-image: url("../img/icon-chevron.svg");
   -webkit-mask-size: contain;
           mask-size: contain;
   -webkit-mask-repeat: no-repeat;
@@ -1168,7 +1164,7 @@ page > top > top-feature
 
 .top-feature-item {
   height: 280rem;
-  background-image: url("../../../img/bg-top-feature.png");
+  background-image: url("../img/bg-top-feature.png");
   background-size: cover;
   background-position: center;
   color: var(--color-white);
@@ -1180,10 +1176,10 @@ page > top > top-feature
   }
 }
 .top-feature-item:nth-child(2) {
-  background-image: url("../../../img/bg-top-feature02.png");
+  background-image: url("../img/bg-top-feature02.png");
 }
 .top-feature-item:nth-child(3) {
-  background-image: url("../../../img/bg-top-feature03.jpg");
+  background-image: url("../img/bg-top-feature03.jpg");
 }
 
 .top-feature-article {
@@ -1359,11 +1355,11 @@ page > top > top-interview
 }
 
 .top-interview-img--nurse {
-  background-image: url("../../../img/img-top-interview.png");
+  background-image: url("../img/img-top-interview.png");
 }
 
 .top-interview-img--staff {
-  background-image: url("../../../img/img-top-interview02.png");
+  background-image: url("../img/img-top-interview02.png");
 }
 
 .top-interview-copy {
@@ -1419,8 +1415,8 @@ page > top > top-interview
   content: "";
   width: 100%;
   height: 12rem;
-  -webkit-mask-image: url("../../../img/icon-chevron.svg");
-          mask-image: url("../../../img/icon-chevron.svg");
+  -webkit-mask-image: url("../img/icon-chevron.svg");
+          mask-image: url("../img/icon-chevron.svg");
   -webkit-mask-size: contain;
           mask-size: contain;
   -webkit-mask-repeat: no-repeat;
@@ -1541,8 +1537,8 @@ page > top > top-entry
   width: 11rem;
   height: 20rem;
   background-color: var(--color-white);
-  -webkit-mask-image: url("../../../img/icon-chevron.svg");
-          mask-image: url("../../../img/icon-chevron.svg");
+  -webkit-mask-image: url("../img/icon-chevron.svg");
+          mask-image: url("../img/icon-chevron.svg");
   -webkit-mask-size: contain;
           mask-size: contain;
   -webkit-mask-repeat: no-repeat;
