@@ -1,49 +1,32 @@
-@use "../../global" as g;
+@use "../global" as g;
 
 /*!
 page > top > top-greeting
 ------------------------------
 */
 .top-greeting {
-    padding-block: 48rem 120rem;
+    padding: 48rem 0 120rem;
     position: relative;
 
     @include g.mq() {
         display: grid;
-        gap: 120rem;
-        grid-template-columns: 500rem 1fr;
-        padding-block: 96rem 219rem;
-        translate: 0 -80rem;
+        gap: 87rem;
+        grid-template-columns: 533rem 1fr;
+        padding: 96rem 0 181rem;
     }
 }
 
 .top-greeting-img {
-    width: 264rem;
+    width: 282rem;
     position: relative;
 
     @include g.mq() {
         width: 100%;
     }
-
-    &::after {
-        content: "";
-        display: block;
-        position: absolute;
-        bottom: -20rem;
-        right: -17rem;
-        background-color: #c6ddff;
-        width: 100%;
-        height: 111rem;
-        z-index: var(--z-index-negative);
-
-        @include g.mq() {
-            height: 211rem;
-        }
-    }
 }
 
 .top-greeting-body {
-    margin: 68rem 20rem 0 20rem;
+    margin: 48rem 20rem 0 20rem;
 
     @include g.mq() {
         margin: 76rem 0 0 0;
@@ -156,14 +139,23 @@ page > top > top-greeting
     z-index: var(--z-index-negative);
     bottom: 65rem;
     right: 0;
+    pointer-events: none;
+
+    @include g.mq() {
+        bottom: 106rem;
+        right: 84rem;
+    }
+}
+
+.top-greeting-img02 img {
     width: 132rem;
     height: 200rem;
+    aspect-ratio: 132 / 200;
 
     @include g.mq() {
         width: 300rem;
         height: 300rem;
-        bottom: 106rem;
-        right: 84rem;
+        aspect-ratio: 300 / 300;
     }
 }
 

@@ -260,6 +260,7 @@ foundation > base
 html {
   font-size: calc(100vw / var(--base-vw));
   background-color: var(--color-bg-base);
+  scroll-behavior: smooth;
 }
 
 body {
@@ -267,11 +268,8 @@ body {
   font-size: 16rem;
   color: var(--color-font-base);
   font-family: var(--font-family-base);
-  font-weight: 500;
-}
-
-* {
   letter-spacing: 0.05em;
+  font-weight: 500;
 }
 
 /*!
@@ -584,14 +582,12 @@ layout > footer
 ------------------------------
 */
 .l-footer {
-  translate: 0 -40rem;
   padding-block: 56rem;
   text-align: center;
 }
 @media screen and (min-width: 768px) {
   .l-footer {
     margin-inline: 70rem;
-    translate: 0 -130rem;
   }
 }
 
@@ -713,29 +709,29 @@ page > top > top-kv
 ------------------------------
 */
 .top-kv {
-  height: 600rem;
+  height: 100svh;
   background-image: url("../img/bg-top-kv-sp.png");
   background-size: cover;
   background-position: center;
-  padding-inline: 12rem;
   position: relative;
 }
 @media screen and (min-width: 768px) {
   .top-kv {
-    height: 800rem;
+    height: calc(100svh + 80rem);
     background-image: url("../img/bg-top-kv.png");
-    padding-inline: 388rem;
   }
 }
 
 .top-kv-img {
   position: absolute;
-  top: 243rem;
-  left: 12rem;
+  width: 357rem;
+  top: 40.5%;
+  left: 50%;
+  translate: -50% 0;
 }
 @media screen and (min-width: 768px) {
   .top-kv-img {
-    left: 388rem;
+    top: 243rem;
     width: 664rem;
   }
 }
@@ -745,14 +741,15 @@ page > top > top-news
 ------------------------------
 */
 .top-news {
-  padding-block: 56rem;
+  padding: 56rem 0;
+  position: relative;
 }
 @media screen and (min-width: 768px) {
   .top-news {
-    padding-block: 64rem;
+    margin: -80rem 0 0;
+    padding: 64rem 0;
     background-color: var(--color-bg-base);
     width: 1370rem;
-    translate: 0 -80rem;
   }
 }
 
@@ -798,7 +795,7 @@ page > top > top-news
 }
 
 .top-news-list {
-  margin-left: 20rem;
+  margin: 0 20rem;
   display: grid;
   grid-template-columns: repeat(3, 257rem);
   gap: 24rem;
@@ -806,7 +803,7 @@ page > top > top-news
 }
 @media screen and (min-width: 768px) {
   .top-news-list {
-    margin-left: 0;
+    margin: 0;
     padding: 0;
     grid-template-columns: repeat(3, 300rem);
     gap: 32rem;
@@ -844,24 +841,27 @@ page > top > top-news
 
 .top-news-cta {
   margin: 32rem 20rem 0 auto;
+  padding: 15rem 23rem 13rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  width: -moz-max-content;
+  width: max-content;
   gap: 16rem;
-  width: 117rem;
-  height: 44rem;
   border: 1rem solid var(--color-font-base);
   border-radius: 100vh;
   font-weight: 600;
   font-family: var(--font-family-en);
   font-size: 14rem;
+  line-height: 1;
 }
 @media screen and (min-width: 768px) {
   .top-news-cta {
     width: 100rem;
-    height: 100rem;
-    margin: 0;
-    margin-left: 56rem;
+    aspect-ratio: 1;
+    margin: 0 0 0 56rem;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
   }
 }
 .top-news-cta::after {
@@ -879,27 +879,29 @@ page > top > top-news
           mask-position: center;
   background-color: var(--color-font-base);
 }
+.top-news-cta span {
+  translate: 0 2rem;
+}
 
 /*!
 page > top > top-greeting
 ------------------------------
 */
 .top-greeting {
-  padding-block: 48rem 120rem;
+  padding: 48rem 0 120rem;
   position: relative;
 }
 @media screen and (min-width: 768px) {
   .top-greeting {
     display: grid;
-    gap: 120rem;
-    grid-template-columns: 500rem 1fr;
-    padding-block: 96rem 219rem;
-    translate: 0 -80rem;
+    gap: 87rem;
+    grid-template-columns: 533rem 1fr;
+    padding: 96rem 0 181rem;
   }
 }
 
 .top-greeting-img {
-  width: 264rem;
+  width: 282rem;
   position: relative;
 }
 @media screen and (min-width: 768px) {
@@ -907,25 +909,9 @@ page > top > top-greeting
     width: 100%;
   }
 }
-.top-greeting-img::after {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: -20rem;
-  right: -17rem;
-  background-color: #c6ddff;
-  width: 100%;
-  height: 111rem;
-  z-index: var(--z-index-negative);
-}
-@media screen and (min-width: 768px) {
-  .top-greeting-img::after {
-    height: 211rem;
-  }
-}
 
 .top-greeting-body {
-  margin: 68rem 20rem 0 20rem;
+  margin: 48rem 20rem 0 20rem;
 }
 @media screen and (min-width: 768px) {
   .top-greeting-body {
@@ -1037,15 +1023,25 @@ page > top > top-greeting
   z-index: var(--z-index-negative);
   bottom: 65rem;
   right: 0;
-  width: 132rem;
-  height: 200rem;
+  pointer-events: none;
 }
 @media screen and (min-width: 768px) {
   .top-greeting-img02 {
-    width: 300rem;
-    height: 300rem;
     bottom: 106rem;
     right: 84rem;
+  }
+}
+
+.top-greeting-img02 img {
+  width: 132rem;
+  height: 200rem;
+  aspect-ratio: 132/200;
+}
+@media screen and (min-width: 768px) {
+  .top-greeting-img02 img {
+    width: 300rem;
+    height: 300rem;
+    aspect-ratio: 300/300;
   }
 }
 
@@ -1075,12 +1071,12 @@ page > top > top-feature
   background-image: var(--color-bg-feature);
   padding: 120rem 0;
   position: relative;
+  z-index: 100;
 }
 @media screen and (min-width: 768px) {
   .top-feature {
     padding: 120rem 100rem 160rem;
     margin: 0 70rem;
-    translate: 0 -80rem;
   }
 }
 
@@ -1122,6 +1118,7 @@ page > top > top-feature
   grid-template-columns: 73rem 1fr;
   align-items: center;
   gap: 8rem;
+  color: var(--color-font-light);
 }
 @media screen and (min-width: 768px) {
   .top-feature-text-ja {
@@ -1222,6 +1219,7 @@ page > top > top-feature
 
 .top-feature-img {
   position: absolute;
+  z-index: var(--z-index-negative);
   top: 0;
   right: 0;
   width: 308rem;
@@ -1242,35 +1240,29 @@ page > top > top-interview
 */
 .top-interview {
   padding: 80rem 0;
-  margin: 0 20rem;
-  translate: 0 -40rem;
+  margin: -40rem 20rem 0;
   background-color: var(--color-bg-base);
   position: relative;
 }
 @media screen and (min-width: 768px) {
   .top-interview {
-    padding: 120rem 0 176rem;
-    margin: 0 70rem;
-    translate: 0 -160rem;
-  }
-}
-
-.top-interview-bg {
-  position: relative;
-  z-index: var(--z-index-negative);
-}
-@media screen and (min-width: 768px) {
-  .top-interview-bg {
-    translate: 0 -80rem;
+    padding: 120rem 104rem;
+    margin: -80rem 70rem 0;
   }
 }
 
 .top-interview-bg02 {
   position: absolute;
-  width: 100%;
-  height: 204rem;
+  width: 100vw;
   top: 464rem;
-  left: 0;
+  left: -20rem;
+  pointer-events: none;
+}
+@media screen and (min-width: 768px) {
+  .top-interview-bg02 {
+    top: 190rem;
+    left: -70rem;
+  }
 }
 
 .top-interview-title {
@@ -1317,11 +1309,18 @@ page > top > top-interview
   background-color: var(--color-font-light);
 }
 
+.top-greeting-body {
+  position: relative;
+  z-index: 2;
+}
+
 .top-interview-content {
   margin-top: 40rem;
   display: grid;
   grid-template-columns: 1fr;
   gap: 44rem;
+  position: relative;
+  z-index: 2;
 }
 @media screen and (min-width: 768px) {
   .top-interview-content {
@@ -1330,15 +1329,9 @@ page > top > top-interview
   }
 }
 
-.top-interview-item {
-  height: 338rem;
-}
 @media screen and (min-width: 768px) {
-  .top-interview-item {
-    height: 447rem;
-  }
   .top-interview-item:nth-child(2) {
-    translate: 0 56rem;
+    margin-top: 56rem;
   }
 }
 
@@ -1440,14 +1433,12 @@ page > top > top-entry
 */
 .top-entry {
   background-color: var(--color-bg-entry);
-  translate: 0 -40rem;
 }
 @media screen and (min-width: 768px) {
   .top-entry {
     margin-inline: 70rem;
     display: grid;
     grid-template-columns: 1fr 560rem;
-    translate: 0 -130rem;
   }
 }
 

@@ -1,4 +1,4 @@
-@use "../../global" as g;
+@use "../global" as g;
 
 /*!
 page > top > top-feature
@@ -8,11 +8,11 @@ page > top > top-feature
     background-image: var(--color-bg-feature);
     padding: 120rem 0;
     position: relative;
+    z-index: 100;
 
     @include g.mq() {
         padding: 120rem 100rem 160rem;
         margin: 0 70rem;
-        translate: 0 -80rem;
     }
 }
 
@@ -52,6 +52,7 @@ page > top > top-feature
     grid-template-columns: 73rem 1fr;
     align-items: center;
     gap: 8rem;
+    color: var(--color-font-light);
 
     @include g.mq() {
         grid-template-columns: 122rem 1fr;
@@ -150,6 +151,7 @@ page > top > top-feature
 
 .top-feature-img {
     position: absolute;
+    z-index: var(--z-index-negative);
     top: 0;
     right: 0;
     width: 308rem;

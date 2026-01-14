@@ -1,4 +1,4 @@
-@use "../../global" as g;
+@use "../global" as g;
 
 /*!
 page > top > top-interview
@@ -6,33 +6,27 @@ page > top > top-interview
 */
 .top-interview {
     padding: 80rem 0;
-    margin: 0 20rem;
-    translate: 0 -40rem;
+    margin: -40rem 20rem 0;
     background-color: var(--color-bg-base);
     position: relative;
 
     @include g.mq() {
-        padding: 120rem 0 176rem;
-        margin: 0 70rem;
-        translate: 0 -160rem;
-    }
-}
-
-.top-interview-bg {
-    position: relative;
-    z-index: var(--z-index-negative);
-
-    @include g.mq() {
-        translate: 0 -80rem;
+        padding: 120rem 104rem;
+        margin: -80rem 70rem 0;
     }
 }
 
 .top-interview-bg02 {
     position: absolute;
-    width: 100%;
-    height: 204rem;
+    width: 100vw;
     top: 464rem;
-    left: 0;
+    left: -20rem;
+    pointer-events: none;
+
+    @include g.mq() {
+        top: 190rem;
+        left: -70rem;
+    }
 }
 
 .top-interview-title {
@@ -78,11 +72,18 @@ page > top > top-interview
     }
 }
 
+.top-greeting-body {
+    position: relative;
+    z-index: 2;
+}
+
 .top-interview-content {
     margin-top: 40rem;
     display: grid;
     grid-template-columns: 1fr;
     gap: 44rem;
+    position: relative;
+    z-index: 2;
 
     @include g.mq() {
         grid-template-columns: repeat(2, 524rem);
@@ -91,13 +92,9 @@ page > top > top-interview
 }
 
 .top-interview-item {
-    height: 338rem;
-
     @include g.mq() {
-        height: 447rem;
-
         &:nth-child(2) {
-            translate: 0 56rem;
+            margin-top: 56rem;
         }
     }
 }

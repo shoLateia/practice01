@@ -1,4 +1,4 @@
-@use "../../global" as g;
+@use "../global" as g;
 
 /*!
 page > top > top-entry
@@ -6,13 +6,11 @@ page > top > top-entry
 */
 .top-entry {
     background-color: var(--color-bg-entry);
-    translate: 0 -40rem;
 
     @include g.mq() {
         margin-inline: 70rem;
         display: grid;
         grid-template-columns: 1fr 560rem;
-        translate: 0 -130rem;
     }
 }
 

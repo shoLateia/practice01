@@ -5,13 +5,11 @@ layout > footer
 ------------------------------
 */
 .l-footer {
-    translate: 0 -40rem;
     padding-block: 56rem;
     text-align: center;
 
     @include g.mq() {
         margin-inline: 70rem;
-        translate: 0 -130rem;
     }
 }
 

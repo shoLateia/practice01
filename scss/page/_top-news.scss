@@ -1,17 +1,18 @@
-@use "../../global" as g;
+@use "../global" as g;
 
 /*!
 page > top > top-news
 ------------------------------
 */
 .top-news {
-    padding-block: 56rem;
+    padding: 56rem 0;
+    position: relative;
 
     @include g.mq() {
-        padding-block: 64rem;
+        margin: -80rem 0 0;
+        padding: 64rem 0;
         background-color: var(--color-bg-base);
         width: 1370rem;
-        translate: 0 -80rem;
     }
 }
 
@@ -54,14 +55,14 @@ page > top > top-news
 }
 
 .top-news-list {
-    margin-left: 20rem;
+    margin: 0 20rem;
     display: grid;
     grid-template-columns: repeat(3, 257rem);
     gap: 24rem;
     overflow: scroll;
 
     @include g.mq() {
-        margin-left: 0;
+        margin: 0;
         padding: 0;
         grid-template-columns: repeat(3, 300rem);
         gap: 32rem;
@@ -98,23 +99,25 @@ page > top > top-news
 
 .top-news-cta {
     margin: 32rem 20rem 0 auto;
+    padding: 15rem 23rem 13rem;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    width: max-content;
     gap: 16rem;
-    width: 117rem;
-    height: 44rem;
     border: 1rem solid var(--color-font-base);
     border-radius: 100vh;
     font-weight: 600;
     font-family: var(--font-family-en);
     font-size: 14rem;
+    line-height: 1;
 
     @include g.mq() {
         width: 100rem;
-        height: 100rem;
-        margin: 0;
-        margin-left: 56rem;
+        aspect-ratio: 1;
+        margin: 0 0 0 56rem;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        gap: 10rem;
     }
 
     &::after {
@@ -127,5 +130,9 @@ page > top > top-news
         mask-repeat: no-repeat;
         mask-position: center;
         background-color: var(--color-font-base);
+    }
+
+    span {
+        translate: 0 2rem;
     }
 }

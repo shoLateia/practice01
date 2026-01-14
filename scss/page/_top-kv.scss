@@ -1,31 +1,32 @@
-@use "../../global" as g;
+@use "../global" as g;
 
 /*!
 page > top > top-kv
 ------------------------------
 */
 .top-kv {
-    height: 600rem;
+    height: 100svh;
     background-image: url("../img/bg-top-kv-sp.png");
     background-size: cover;
     background-position: center;
-    padding-inline: 12rem;
     position: relative;
 
     @include g.mq() {
-        height: 800rem;
+        // height: 800rem;
+        height: calc(100svh + 80rem);
         background-image: url("../img/bg-top-kv.png");
-        padding-inline: 388rem;
     }
 }
 
 .top-kv-img {
     position: absolute;
-    top: 243rem;
-    left: 12rem;
+    width: 357rem;
+    top: 40.5%;
+    left: 50%;
+    translate: -50% 0;
 
     @include g.mq() {
-        left: 388rem;
+        top: 243rem;
         width: 664rem;
     }
 }
